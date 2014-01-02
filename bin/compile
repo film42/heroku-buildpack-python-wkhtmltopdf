@@ -169,6 +169,16 @@ else
   puts-step "Using Python runtime ($PYTHON_VERSION)"
 fi
 
+# # # # # # # # # # # # #
+# BEGIN CUSTOM ADDITIONS
+# # # # # # # # # # # # #
+
+cp wkhtmltopdf-linux-amd64 $BUILD_DIR/.heroku/vendor/bin/wkhtmltopdf
+
+# # # # # # # # # # # # #
+# END CUSTOM ADDITIONS
+# # # # # # # # # # # # #
+
 # If Pip isn't up to date:
 if [ "$FRESH_PYTHON" ] || [[ ! $(pip --version) == *$PIP_VERSION* ]]; then
   WORKING_DIR=$(pwd)
