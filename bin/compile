@@ -173,7 +173,7 @@ fi
 # BEGIN CUSTOM ADDITIONS
 # # # # # # # # # # # # #
 
-cp wkhtmltopdf-linux-amd64 $BUILD_DIR/.heroku/vendor/bin/wkhtmltopdf
+cp $BIN_DIR/wkhtmltopdf-linux-amd64 $BUILD_DIR/.heroku/vendor/bin/wkhtmltopdf
 
 # # # # # # # # # # # # #
 # END CUSTOM ADDITIONS
