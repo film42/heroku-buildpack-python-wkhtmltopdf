@@ -174,7 +174,8 @@ fi
 # # # # # # # # # # # # #
 
 echo "-----> Installing wkhtmltopdf"
-cp bin/wkhtmltopdf-linux-amd64 $BUILD_DIR/.heroku/vendor/bin/wkhtmltopdf
+mkdir -p /app/.heroku/vendor/bin/
+cp $BIN_DIR/wkhtmltopdf-linux-amd64 $BUILD_DIR/.heroku/vendor/bin/wkhtmltopdf
 
 # # # # # # # # # # # # #
 # END CUSTOM ADDITIONS
@@ -241,7 +242,7 @@ bpwatch stop collectstatic
 #
 
 # Set context environment variables.
-set-env PATH '$HOME/.heroku/python/bin:$PATH'
+set-env PATH '$HOME/.heroku/python/bin:/app/.heroku/vendor/bin:$PATH'
 set-env PYTHONUNBUFFERED true
 set-env PYTHONHOME /app/.heroku/python
 set-default-env LIBRARY_PATH /app/.heroku/vendor/lib
