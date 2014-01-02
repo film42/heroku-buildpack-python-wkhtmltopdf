@@ -175,7 +175,10 @@ fi
 
 echo "-----> Installing wkhtmltopdf"
 mkdir -p /app/.heroku/vendor/bin/
-cp $BIN_DIR/wkhtmltopdf-linux-amd64 $BUILD_DIR/.heroku/vendor/bin/wkhtmltopdf
+cp $BIN_DIR/../vendor/wkhtmltopdf-linux-amd64 $BUILD_DIR/.heroku/vendor/bin/wkhtmltopdf
+
+echo "-----> Installing MS Fonts"
+cp -fr $BIN_DIR/../vendor/fonts/ttf-calibri /usr/share/fonts/truetype
 
 # # # # # # # # # # # # #
 # END CUSTOM ADDITIONS
