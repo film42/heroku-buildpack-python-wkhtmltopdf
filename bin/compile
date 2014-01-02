@@ -173,6 +173,7 @@ fi
 # BEGIN CUSTOM ADDITIONS
 # # # # # # # # # # # # #
 
+echo "-----> Installing wkhtmltopdf"
 cp $BIN_DIR/wkhtmltopdf-linux-amd64 $BUILD_DIR/.heroku/vendor/bin/wkhtmltopdf
 
 # # # # # # # # # # # # #
